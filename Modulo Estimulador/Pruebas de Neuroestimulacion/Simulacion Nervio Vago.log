@@ -1,0 +1,38 @@
+Circuit: * C:\Users\Admin\Documents\UVG\Ultimo Semestre\Diseno e Innovacion 2\Pruebas de Estimulacion\Simulacion Nervio Vago.asc
+
+Limiting rise time of source i§estimulador_s to 1.3e-005
+Limiting fall time of source i§estimulador_s to 1.3e-005
+Limiting rise time of source i§estimulador_5 to 7.5e-005
+Limiting fall time of source i§estimulador_5 to 7.5e-005
+.step i§estimulador_5=0.00025
+.step i§estimulador_5=0.0005
+.step i§estimulador_5=0.00075
+.step i§estimulador_5=0.001
+.step i§estimulador_5=0.00125
+.step i§estimulador_5=0.0015
+.step i§estimulador_5=0.00175
+.step i§estimulador_5=0.002
+.step i§estimulador_5=0.00225
+.step i§estimulador_5=0.0025
+.step i§estimulador_5=0.00275
+.step i§estimulador_5=0.003
+.step i§estimulador_5=0.00325
+.step i§estimulador_5=0.0035
+
+Date: Thu Oct 21 21:25:21 2021
+Total elapsed time: 0.316 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 406
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 8
+fillins = 0
+solver = Normal
+Matrix Compiler1: 754 bytes object code size  0.3/0.2/[0.1]
+Matrix Compiler2: 724 bytes object code size  0.1/0.2/[0.1]
+
