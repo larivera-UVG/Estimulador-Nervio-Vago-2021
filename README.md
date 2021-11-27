@@ -1,9 +1,9 @@
 # Estimulador-Nervio-Vago-2021
-Desarrollo de un módulo de estimulación para el nervio vago, y su varilla de programación.
+Desarrollo de un módulo de estimulación para el nervio vago, y su varilla de programación. En este repositorio se encuentran la combinacion de todos los avances logrados en la Fase III del desarollo de un prototipo de estimulador de nervio vago de la Universidad del Valle de Guatemala. Los aportes estan basados en el trabajo de las fases pasadas del proyecto. En esta fase se logro establecer la comunicacion inalambrica de los dos modulos que conforman el estimulador VNS. Ademas se hicieron estudios para determinar el material de desarollo para la carcasa del modulo estimulador, asi como un estudio para validar los parametros de descarga del mismo. Asi mismo se hicieron mejoras a ambos modulos por medio de diseno 3D y diseno de circuitos impresos. 
 ## Modulo Estimulador
 ### Funcionamiento
 ### Codigos
-Los codigos utilizados para el modulo estimulador se dividen en 2 partes. Una serie de codigos para pruebas directamente con los breakout boards (Trinket M0) y los modulos de comunicacion RF (NRF24L01). Los demas codigos son los codigos encargados de generar los pulsos PWM con una rampa de inicio y una rampa de bajada desarollados por Gustavo Ordoñez, en conjunto con la seccion de codigo encargada de generar la comunicacion por medio de RF por medio de la funcion __RFBegin__.
+Los codigos utilizados para el modulo estimulador se dividen en 2 partes. Una serie de codigos para pruebas directamente con los breakout boards (Trinket M0) y los modulos de comunicacion RF (NRF24L01). Los demas codigos son los codigos encargados de generar los pulsos PWM con una rampa de inicio y una rampa de bajada desarollados por Gustavo Ordoñez, en conjunto con la seccion de codigo encargada de generar la comunicacion por medio de RF por medio de la funcion __RFBegin__ y la funcion __RFSetup__.
 #### Codigos Para Pruebas de Comunicacion
 De los codigos para pruebas se tienen los siguientes archivos:
 * Codigos_de_Diagnostico_para_los_modulos: Este codigo imprime en la consola (COM) los parametros de transmision del modulo NRF24L01 e indica si este tiene problemas de transmision:
@@ -31,8 +31,20 @@ Este archivo contiene los circuitos con los parametros de simulacion adecuados p
 * Simulacion Nervio Vago.raw: Archivo que contiene los parametros para replicar las graficas
 * Simulacion Nervio Vago.plt
 * Simulacion Nervio Vago.log
-
 ## Modulo Programador
+### Codigos
+Los codigos utilizados para la varilla programadora se dividen en 3 partes. Al igual que el modulo estimulador se tienen codigos para pruebas de comunicacion por medio del modulo NRF24L01. Luego se tiene el codigo principal que le da funcionalidad WiFi y RF a la varilla programadora. Por ultimo esta el codigo de la interfaz grafica que le deja al usuario programar los parametros por medio de una consola corriendo una aplicacion de Python.
+### Codigo de la varilla programadora
+* Compu_a_Esp_a_SAMD21: Este codigo
+### Codigo para la interfaz grafica
+* Interfaz_VNS.py
+### Codigo para pruebas de comunicacion
+* Codigos de Diagnostico
+ * I2C_Scanner: Da la direccion de cualquier dispositivo conectado por medio de I2C a el ESP8266
+ * lcd_i2c-test: Pruebas para verificar que los datos mandados por I2C aparezcan en la pantalla LCD 1602
+ * Master_NRF_Tester: Codigo hermano del Slave_NRF_tester que muestra en la pantalla serial si se estan recibiendo exitosamente una serie de numeros incrementales, si no es el caso avisa que hubo un error de comunicacion de la forma "TX Failed"
+*  ESP8266_a_SAMD21_nRF4L01: Codigo hermano de SAMD_a_ESP8266_nRF24L01 que se utiliza para hacer pruebas de emision, recepcion, emision y recepcion e inclusive pruebas de la pantalla LCD por medio de I2C para el ESP8266 y el ESP Wroom32
+*  Trinket_Como_Receptor_de_los_Parametros: Codigo de Pruebas basicas para recibir datos en forma de un array desde el Arduino o desde el ESP8266
 ### Modelos CAD 
 Misma descripcion que para el modulo estimulador, pero se van a dar dos links diferentes a la misma carpeta de Google Drive para facilitar el orden.
 #### Archivos de Inventor 2021
